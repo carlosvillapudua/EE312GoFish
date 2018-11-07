@@ -26,11 +26,11 @@
             myCards[i] = Card(i-(3*SIZE/4)+1, Card::clubs);
         }
 
-for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is made correctly
+/*for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is made correctly
 cout << myCards[i].toString() << endl;
 }
 cout<< "hello hello hello" << endl;
-
+*/
     }
 
     void Deck::shuffle() {
@@ -51,9 +51,9 @@ cout<< "hello hello hello" << endl;
             }
         }
 
-for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is shuffled correctly
+/*for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is shuffled correctly
 cout << myCards[i].toString() << endl;
-}
+}*/
 //test
 
     }

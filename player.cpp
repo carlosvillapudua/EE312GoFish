@@ -21,8 +21,6 @@ using namespace std;
 
 	void Player::addCard(Card c){
 		myHand.push_back(c);
-		unsigned int currentTime = (unsigned) time(0);
-        srand(currentTime);		
 	}
 
 	void Player::bookCards(Card c1, Card c2){
@@ -37,7 +35,7 @@ using namespace std;
 	}
 
 	bool Player::cardInHand(Card c) const{
-		vector<Card>::iterator iter;
+		vector<Card>::const_iterator iter;
 
 		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){        
 			if(c.getRank() == (*iter).getRank()){
@@ -49,14 +47,13 @@ using namespace std;
 	}
 	//confused about why returning the same card removed
 	Card Player::removeCardFromHand(Card c){
-//int i = 0;
 		Card retCard = c;
 		vector<Card>::iterator iter;
 		iter = myHand.begin();
 
-		while((*iter).getRank() != c.getRank()){
+		// loop until rank is found or if end it reached
+		while((*iter).getRank() != c.getRank() && iter != myHand.end()){
 			iter++;
-//i++
 		}
 
 //myHand.erase(myhand.begin()+i);
@@ -64,24 +61,28 @@ using namespace std;
 		return retCard;
 	}
 
+// this this function supposed to return the concacted version of all the cards in the hand?
 	string Player::showHand() const{
-		vector<Card>::iterator iter;
-		iter = myHand.begin();
-
-		cout << "Cards in " << myName << "'s hand:" << endl;
+		vector<Card>::const_iterator iter;
+		string s;
+		//cout << "Cards in " << myName << "'s hand:" << endl;
 		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){
-			cout << *iter << endl;
+			//cout << *iter << endl;
+			s += (*iter).toString();
 		}
+		return s;
 	}
 
+// this this function supposed to return the concacted version of all the cards in the book?
 	string Player::showBooks() const{
-		vector<Card>::iterator iter;
-		iter = myBook.begin();
-
-		cout << "Books of :" << myName << endl;
+		vector<Card>::const_iterator iter;
+		string s;
+		//cout << "Books of :" << myName << endl;
 		for(iter = myBook.begin() ; iter != myBook.end() ; iter = iter + 2){
-			cout << *iter << " " << *(iter + 1) << endl;
+			//cout << *iter << " " << *(iter + 1) << endl;
+			s += (*iter).toString();
 		}
+		return s;
 	}
 
 	int Player::getHandSize() const{
@@ -93,11 +94,8 @@ using namespace std;
 	}
 
 	bool Player::checkHandForPair(Card &c1, Card &c2){
-		vector<Card>::iterator iter;
-		iter = myHand.begin();
-
-		vector<Card>::iterator iterInner;
-		iterInner = myHand.begin();
+		vector<Card>::const_iterator iter;
+		vector<Card>::const_iterator iterInner;
 
 		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){		
 			for(iterInner = myHand.begin() ; iterInner != myHand.end() ; iter++){

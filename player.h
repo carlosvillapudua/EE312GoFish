@@ -18,6 +18,7 @@ using namespace std;
 
 class Player
 {
+    
 public:
     Player();
 
@@ -74,7 +75,6 @@ public:
 
     bool sameRankInHand(Card c) const;
 
-
 private:
 
     vector <Card> myHand;
@@ -83,7 +83,6 @@ private:
     string myName;
 
 };
-
 
 #endif
 
