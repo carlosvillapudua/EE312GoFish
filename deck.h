@@ -24,8 +24,6 @@ class Deck
     static const int SIZE = 52;
 
 public:
-
-
     Deck();             // pristine, sorted deck
 
     void shuffle();     // shuffle the deck, all 52 cards present
@@ -34,7 +32,6 @@ public:
     int  size() const;  // # cards left in the deck
 
 private:
-
     Card myCards[SIZE];
     int myIndex;  // current card to deal
 };

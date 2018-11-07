@@ -27,12 +27,9 @@ using namespace std;
     }
 
     string Card::toString() const {
-        string appendVal = suitString(mySuit) + rankString(myRank);
+        string appendVal =  rankString(myRank) + suitString(mySuit);
         return appendVal;
-
     }
-
-
 
     bool Card::sameSuitAs(const Card &c) const {
         if (mySuit == c.mySuit){
@@ -92,7 +89,10 @@ using namespace std;
         }
         else
             return true;
-}
+    }
 
-//      what is happening below???
-//    ostream& operator << (ostream& out, const Card& c);
+    ostream& operator << (ostream& out, const Card& c){
+        out << c.toString();
+        return out;
+    }
+

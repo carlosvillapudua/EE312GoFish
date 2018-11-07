@@ -13,7 +13,6 @@
         unsigned int currentTime = (unsigned) time(0);
         srand(currentTime);		                                               //seed rand function with time, which is different at ANY moment
 
-
         for (int i = 0; i < ((SIZE/4)); i++){                               //divide creation of deck of cards into four parts - by SUIT
             myCards[i] = Card(i+1, Card::spades);
         }
@@ -27,38 +26,47 @@
             myCards[i] = Card(i-(3*SIZE/4)+1, Card::clubs);
         }
 
-        for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is made correctly
-            cout << myCards[i].toString() << endl;
-        }
-        cout<< "hello hello hello" << endl;
+for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is made correctly
+cout << myCards[i].toString() << endl;
+}
+cout<< "hello hello hello" << endl;
+
     }
 
     void Deck::shuffle() {
-    int randNum1;
-    int randNum2;
-    Card temp;
-    for (int j = 0; j < 4*SIZE; j++){
-        randNum1 = rand() % SIZE;                   //random numbers used to determine which indices to swap
-        randNum2 = rand() % SIZE;
+        int randNum1;
+        int randNum2;
 
-        temp = myCards[randNum1];                   //save previous value of content @ index of randNum1
-        myCards[randNum1] = myCards[randNum2];      //swap contents of randNum2 into element space determined by randNum1
-        myCards[randNum2] = temp;                   //place contents of previous randNum1 into randNum2 space
-    }
+        int cardsLeft = SIZE - myindex;        
+        Card temp;
 
-        for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is shuffled correctly
-            cout << myCards[i].toString() << endl;
+        if(myIndex < SIZE){  //shuffle only if deck has cards left
+            for (int j = 0; j < 4*cardsLeft; j++){
+                randNum1 = (rand() % cardsLeft) + myIndex;                   //random numbers used to determine which indices to swap
+                randNum2 = (rand() % cardsLeft) + myIndex;
+
+                temp = myCards[randNum1];                   //save previous value of content @ index of randNum1
+                myCards[randNum1] = myCards[randNum2];      //swap contents of randNum2 into element space determined by randNum1
+                myCards[randNum2] = temp;                   //place contents of previous randNum1 into randNum2 space
+            }
         }
 
+for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is shuffled correctly
+cout << myCards[i].toString() << endl;
+}
 
     }
 
-    Card Deck::dealCard() {                             //needs to be tested
+    Card Deck::dealCard() {               
         if (myIndex < SIZE){                          //make upper bound size, because we only want to deal 52 cards (0-51)
             Card retCard = myCards[myIndex];
             myIndex++;
             return retCard;
         }
+
+        // not sure what to do when all cards are dealt
+        Card c;
+        return c;
     }
 
     int Deck::size() const {

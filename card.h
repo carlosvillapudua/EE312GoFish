@@ -30,8 +30,6 @@ using namespace std;
 class Card
 {
 public:
-
-
     enum Suit {spades, hearts, diamonds, clubs};
 
     Card();          // default, ace of spades
@@ -48,8 +46,6 @@ public:
 
     bool operator == (const Card& rhs) const;
     bool operator != (const Card& rhs) const;
-
-
 
 private:
 
