@@ -84,9 +84,22 @@ using namespace std;
 	}
 
 	int getHandSize() const{
-
+		return myHand.size();
 	}
 
 	int getBookSize() const{
-
+		return  myBook.size();
 	}
+
+	
+
+
+
+
+
+
+
+
+
+
+
