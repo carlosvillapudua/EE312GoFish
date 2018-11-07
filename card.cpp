@@ -72,8 +72,9 @@ using namespace std;
                 break;
             }
         }
-
+        return "ERROR";
     }
+    //test
 
     bool Card::operator == (const Card& rhs) const{
         if (mySuit == rhs.mySuit && myRank == rhs.myRank){

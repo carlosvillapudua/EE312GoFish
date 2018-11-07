@@ -37,7 +37,7 @@ cout<< "hello hello hello" << endl;
         int randNum1;
         int randNum2;
 
-        int cardsLeft = SIZE - myindex;        
+        int cardsLeft = SIZE - myIndex;        
         Card temp;
 
         if(myIndex < SIZE){  //shuffle only if deck has cards left
@@ -54,6 +54,7 @@ cout<< "hello hello hello" << endl;
 for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is shuffled correctly
 cout << myCards[i].toString() << endl;
 }
+//test
 
     }
 
@@ -72,3 +73,7 @@ cout << myCards[i].toString() << endl;
     int Deck::size() const {
         return (SIZE - myIndex);                    //myIndex tells us how many cards we have dealt -- (Cards Dealt) + (Cards Left to Deal) = (Total Cards)
     }
+
+
+
+

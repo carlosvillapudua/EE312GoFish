@@ -3,7 +3,8 @@
 //
 
 #include "player.h"
-
+#include "card.h"
+//test
 #include <cstdlib>
 #include <iostream>
 #include <string>
@@ -18,13 +19,13 @@ using namespace std;
         srand(currentTime);		
 	}
 
-	Player::addCard(Card c){
+	void Player::addCard(Card c){
 		myHand.push_back(c);
 		unsigned int currentTime = (unsigned) time(0);
         srand(currentTime);		
 	}
 
-	Player::bookCards(Card c1, Card c2){
+	void Player::bookCards(Card c1, Card c2){
 		myBook.push_back(c1);
 		myBook.push_back(c2);
 	}
@@ -63,7 +64,7 @@ using namespace std;
 		return retCard;
 	}
 
-	string showHand() const{
+	string Player::showHand() const{
 		vector<Card>::iterator iter;
 		iter = myHand.begin();
 
@@ -73,7 +74,7 @@ using namespace std;
 		}
 	}
 
-	string showBooks() const{
+	string Player::showBooks() const{
 		vector<Card>::iterator iter;
 		iter = myBook.begin();
 
@@ -83,12 +84,31 @@ using namespace std;
 		}
 	}
 
-	int getHandSize() const{
+	int Player::getHandSize() const{
 		return myHand.size();
 	}
 
-	int getBookSize() const{
+	int Player::getBookSize() const{
 		return  myBook.size();
+	}
+
+	bool Player::checkHandForPair(Card &c1, Card &c2){
+		vector<Card>::iterator iter;
+		iter = myHand.begin();
+
+		vector<Card>::iterator iterInner;
+		iterInner = myHand.begin();
+
+		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){		
+			for(iterInner = myHand.begin() ; iterInner != myHand.end() ; iter++){
+				if(*iter == *iterInner){
+					c1 = *iter;
+					c2 = *iterInner;
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 
