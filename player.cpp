@@ -46,8 +46,10 @@ using namespace std;
 		return false;		
 	}
 
+	// what happens if theres no cards in hand?
 	Card Player::chooseCardFromHand() const{
 		int randCard = rand() % myHand.size();
+
 		return myHand[randCard];
 	}
 
@@ -64,7 +66,6 @@ using namespace std;
 	}
 	//confused about why returning the same card removed
 	Card Player::removeCardFromHand(Card c){
-		Card retCard = c;
 		vector<Card>::iterator iter;
 		iter = myHand.begin();
 
@@ -72,9 +73,9 @@ using namespace std;
 		while((*iter).getRank() != c.getRank() && iter != myHand.end()){
 			iter++;
 		}
-
+		Card retcard = *iter;
 		myHand.erase(iter);
-		return retCard;
+		return retcard;
 	}
 
 	//tested
@@ -150,7 +151,7 @@ using namespace std;
 	}
 
 	int Player::getBookSize() const{
-		return  myBook.size();
+		return  (myBook.size())/2 ;
 	}
 
 
@@ -158,17 +159,21 @@ using namespace std;
 		vector<Card>::const_iterator iter;
 		vector<Card>::const_iterator iterInner;
 
-		for(iter = myHand.begin() ; iter != myHand.end() - 1 ; iter++){ // loop through first to second to last card
-			for(iterInner = iter + 1 ; iterInner != myHand.end() ; iter++){ // loop through second to last card
+//if(myHand.size() > 1) {
+		if(getHandSize() > 1) {
+			for(iter = myHand.begin() ; iter != myHand.end() - 1 ; iter++){ // loop through first to second to last card
+				for(iterInner = iter + 1 ; iterInner != myHand.end() ; iterInner++){ // loop through second to last card
 
-				// if the ranks are equal in the hand, save those cards to the input paramets and return true
-				if((*iter).getRank() == (*iterInner).getRank()){
-					c1 = *iter;
-					c2 = *iterInner;
-					return true;
+					// if the ranks are equal in the hand, save those cards to the input paramets and return true
+					if((*iter).getRank() == (*iterInner).getRank()){
+						c1 = *iter;
+						c2 = *iterInner;
+						return true;
+					}
 				}
 			}
 		}
+
 		// if no pair found, return false
 		return false;
 	}
