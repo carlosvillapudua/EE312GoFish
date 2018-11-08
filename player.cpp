@@ -16,16 +16,19 @@
 
 using namespace std;
 	
+	//tested
 	Player::Player(){
 		myName = "";
 		unsigned int currentTime = (unsigned) time(0);
         srand(currentTime);		
 	}
 
+	//tested
 	void Player::addCard(Card c){
 		myHand.push_back(c);
 	}
 
+	//tested
 	void Player::bookCards(Card c1, Card c2){
 		myBook.push_back(c1);
 		myBook.push_back(c2);
@@ -35,7 +38,7 @@ using namespace std;
 		vector<Card>::const_iterator iter;
 
 		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){        
-			if(c == *iter){
+			if(c.getRank() == (*iter).getRank()){
 				return true;
 			}  
 		}
@@ -70,11 +73,11 @@ using namespace std;
 			iter++;
 		}
 
-//myHand.erase(myhand.begin()+i);
 		myHand.erase(iter);
 		return retCard;
 	}
 
+	//tested
 	string Player::showHand() const{
 		vector<Card>::const_iterator iter;
 		string s;
@@ -100,6 +103,7 @@ using namespace std;
 		return s;
 	}
 
+	//tested
 	string Player::showBooks() const{
 		vector<Card>::const_iterator iter;
 		string s;
