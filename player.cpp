@@ -158,26 +158,18 @@ using namespace std;
 		vector<Card>::const_iterator iter;
 		vector<Card>::const_iterator iterInner;
 
-		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){		
-			for(iterInner = myHand.begin() ; iterInner != myHand.end() ; iter++){
-				if(*iter == *iterInner){
+		for(iter = myHand.begin() ; iter != myHand.end() - 1 ; iter++){ // loop through first to second to last card
+			for(iterInner = iter + 1 ; iterInner != myHand.end() ; iter++){ // loop through second to last card
+
+				// if the ranks are equal in the hand, save those cards to the input paramets and return true
+				if((*iter).getRank() == (*iterInner).getRank()){
 					c1 = *iter;
 					c2 = *iterInner;
 					return true;
 				}
 			}
 		}
-		return false;
-	}
-
-	bool Player::sameRankInHand(Card c) const{
-		vector<Card>::const_iterator iter;
-		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){
-			if((*iter).getRank() == c.getRank()){
-				return true;
-			}
-		}
-
+		// if no pair found, return false
 		return false;
 	}
 
