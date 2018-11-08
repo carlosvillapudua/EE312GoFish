@@ -1,0 +1,3 @@
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/cmake-build-debug/CMakeFiles/GoFish.dir
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/cmake-build-debug/CMakeFiles/rebuild_cache.dir

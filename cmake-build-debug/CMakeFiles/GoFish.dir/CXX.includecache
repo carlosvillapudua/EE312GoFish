@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
+iostream
+-
+string
+-
+
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/deck.h
+card.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
+
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/go_fish.cpp
+iostream
+-
+cstdlib
+-
+fstream
+-
+iostream
+-
+card.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
+player.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/player.h
+deck.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/deck.h
+
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/player.h
+iostream
+-
+string
+-
+vector
+-
+card.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
+

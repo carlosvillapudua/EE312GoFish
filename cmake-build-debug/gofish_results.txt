@@ -1,0 +1,21 @@
+Yale Patt draws As
+you have a 3?
+Ramesh Yerraballi says - Yes, I have a 3.
+Yale Patt booksAs, As
+None
+*********************
+Yale Patt has books:
+Jd|Jh  2d|2c  6h|6s  Ac|Ad  8d|8s
+Js|Jc  5h|5d  Qd|Qc  2h|2s  7h|7s
+3h|3s  Qh|Qs  As|Ah  9h|9s  
+Ramesh Yerraballi has books:
+3d|3c  10d|10h  6d|6c  Ks|Kh  4d|4s
+7c|7d  10c|10s  5c|5s  9d|9c  4c|4h
+8c|8h  Kd|Kc  
+, I have a 9.
+Yale Patt books the 9
+
+Yale Patt asks - Do you have a A?
+Ramesh Yerraballi says - Go Fish!
+As, As
+
