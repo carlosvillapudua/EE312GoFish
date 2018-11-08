@@ -11,6 +11,9 @@
 
 #include <time.h>
 
+#define FIVEBOOKS 10
+#define EVERYBOOK 1
+
 using namespace std;
 	
 	Player::Player(){
@@ -28,6 +31,17 @@ using namespace std;
 		myBook.push_back(c2);
 	}
 
+	bool Player::rankInHand(Card c) const{
+		vector<Card>::const_iterator iter;
+
+		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){        
+			if(c == *iter){
+				return true;
+			}  
+		}
+
+		return false;		
+	}
 
 	Card Player::chooseCardFromHand() const{
 		int randCard = rand() % myHand.size();
@@ -38,7 +52,7 @@ using namespace std;
 		vector<Card>::const_iterator iter;
 
 		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){        
-			if(c.getRank() == (*iter).getRank()){
+			if(c == *iter){
 				return true;
 			}  
 		}
@@ -61,35 +75,65 @@ using namespace std;
 		return retCard;
 	}
 
-// this this function supposed to return the concacted version of all the cards in the hand?
 	string Player::showHand() const{
 		vector<Card>::const_iterator iter;
 		string s;
-		//cout << "Cards in " << myName << "'s hand:" << endl;
+
 		if(getHandSize() > 0){
-			for(iter = myHand.begin() ; iter != myHand.end() ; iter++){
-				//cout << *iter << endl;
+			// priming the string
+			iter = myHand.begin();
+			s += (*iter).toString();
+			iter++;
+
+			// adding rest of the cards in with a comma in front
+			while(iter != myHand.end()){
+				s += ", ";
 				s += (*iter).toString();
+				iter++;
 			}
 		}
 		else{
+			// message if there's no cards
 			s = "None";
 		}
 
 		return s;
 	}
 
-// this this function supposed to return the concacted version of all the cards in the book?
 	string Player::showBooks() const{
 		vector<Card>::const_iterator iter;
 		string s;
-		//cout << "Books of :" << myName << endl;
+		int bookCounter = 0;
+
 		if(getBookSize() > 0){
-			for(iter = myBook.begin() ; iter != myBook.end() ; iter = iter + 2){
-				//cout << *iter << " " << *(iter + 1) << endl;
+			iter = myBook.begin();
+
+			// adding rest of the cards in with a comma in front
+			while(iter != myBook.end()){
+				bookCounter++;
 				s += (*iter).toString();
+
+				// new line every 5 books
+				if(bookCounter % FIVEBOOKS == 0){  
+					s += "\n";
+				}
+
+				// space after printing every book
+				if(bookCounter % EVERYBOOK == 0){
+					if(bookCounter % FIVEBOOKS != 0){
+						s += "  ";
+					}
+					
+				}
+				// comma between the cards in the book
+				else{
+					s += ", ";
+				}
+				iter++;
 			}
 		}
+
+		// error message if no books in player
 		else{
 			s = "None";
 		}
@@ -105,6 +149,8 @@ using namespace std;
 		return  myBook.size();
 	}
 
+
+// test 
 	bool Player::checkHandForPair(Card &c1, Card &c2){
 		vector<Card>::const_iterator iter;
 		vector<Card>::const_iterator iterInner;
@@ -118,6 +164,17 @@ using namespace std;
 				}
 			}
 		}
+		return false;
+	}
+
+	bool Player::sameRankInHand(Card c) const{
+		vector<Card>::const_iterator iter;
+		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){
+			if((*iter).getRank() == c.getRank()){
+				return true;
+			}
+		}
+
 		return false;
 	}
 

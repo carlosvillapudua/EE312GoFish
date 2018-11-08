@@ -43,9 +43,18 @@ int main( )
    dealHand(d, p1, numCards);
    dealHand(d, p2, numCards);
 
+   p1.bookCards(d.dealCard(), d.dealCard());
+   p1.bookCards(d.dealCard(), d.dealCard());
+   p1.bookCards(d.dealCard(), d.dealCard());
+   p1.bookCards(d.dealCard(), d.dealCard());
+   p1.bookCards(d.dealCard(), d.dealCard());
+   p1.bookCards(d.dealCard(), d.dealCard());
+
    cout << p1.getName() <<" has : " << p1.showHand() << endl;
    cout << p2.getName() <<" has : " << p2.showHand() << endl;
-
+   cout << p1.getName() <<" has books:\n" << p1.showBooks() << endl;
+   cout << p2.getName() <<" has books:\n" << p2.showBooks() << endl;
+   //cout << "Ac, Ac  5s, 5s  Ac, Ac  5s, 5s  Ac, Ac  5s, 5s \nAc, Ac  5s, 5s  Ac, Ac  5s, 5s  Ac, Ac  5s, 5s\n";
     return EXIT_SUCCESS;
 }
 
