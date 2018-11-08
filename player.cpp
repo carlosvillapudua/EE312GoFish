@@ -12,7 +12,7 @@
 #include <time.h>
 
 #define FIVEBOOKS 10
-#define EVERYBOOK 1
+#define EVERYBOOK 2
 
 using namespace std;
 	
@@ -28,7 +28,7 @@ using namespace std;
 		myHand.push_back(c);
 	}
 
-	//tested
+	//need to remove cards from hand
 	void Player::bookCards(Card c1, Card c2){
 		myBook.push_back(c1);
 		myBook.push_back(c2);
@@ -124,14 +124,14 @@ using namespace std;
 
 				// space after printing every book
 				if(bookCounter % EVERYBOOK == 0){
-					if(bookCounter % FIVEBOOKS != 0){
+					 if(bookCounter % FIVEBOOKS != 0){
 						s += "  ";
-					}
+					 }
 					
 				}
-				// comma between the cards in the book
 				else{
-					s += ", ";
+					// comma between the cards in the book
+					s += "|";
 				}
 				iter++;
 			}
@@ -154,7 +154,6 @@ using namespace std;
 	}
 
 
-// test 
 	bool Player::checkHandForPair(Card &c1, Card &c2){
 		vector<Card>::const_iterator iter;
 		vector<Card>::const_iterator iterInner;
