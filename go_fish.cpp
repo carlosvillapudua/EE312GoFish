@@ -69,8 +69,8 @@ int main( )
    cout << p1.showHand() << endl;
    cout << p2.showHand() << endl;
    cout << "*********************" << endl;
-   cout << p1.showBooks() << endl;
-   cout << p2.showBooks() << endl;
+   cout << p1.getName() <<" has books:\n" << p1.showBooks() << endl;
+   cout << p2.getName() <<" has books:\n" << p2.showBooks() << endl;
 
 
    /*p1.bookCards(d.dealCard(), d.dealCard());
@@ -108,6 +108,9 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d){
             pTurn.removeCardFromHand(c2);
         }
 
+        if(pTurn.getHandSize() == 0){
+            dealHand(d, pTurn, 1);
+        }
         //asks pAsked for a card
         Card ask = pTurn.chooseCardFromHand(); // get random card to ask from hand
         cout << pTurn.getName() << " asks - Do you have a " << ask.rankString(ask.getRank()) << "?" << endl;
@@ -121,9 +124,12 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d){
         }
         else{
             cout << pAsked.getName() << " says - Go Fish!" << endl;
-            getCard = d.dealCard();
-            pTurn.addCard(getCard);
-            cout << pTurn.getName() << " draws " << getCard << endl;
+
+            dealHand(d, pTurn, 1);
+
+            // getCard = d.dealCard();
+            // pTurn.addCard(getCard);
+            // cout << pTurn.getName() << " draws " << getCard << endl;
 
             cout << pTurn.showHand() << endl;
             cout << "\n";
@@ -137,8 +143,12 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d){
 
 void dealHand(Deck &d, Player &p, int numCards)
 {
-    for (int i=0; i < numCards; i++)
-       p.addCard(d.dealCard());
+    Card c;
+    for (int i=0; i < numCards; i++){
+        c = d.dealCard();
+        p.addCard(c);
+    }
+    cout << p.getName() << " draws " << c << endl;
 }
 
 
