@@ -57,7 +57,7 @@ int main( )
     }
    }
 
-   
+
    // cout << p1.showHand() << endl;
    // cout << p2.showHand() << endl;
    // cout << "*********************" << endl;
@@ -120,8 +120,11 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck d){
         }
         else{
             cout << pAsked.getName() << " says - Go Fish!" << endl;
+            getCard = d.dealCard();
+            pTurn.addCard(getCard);
+            cout << pTurn.getName() << " draws " << getCard << endl;
+            cout << pTurn.showHand() << endl;
             cout << "\n";
-            pTurn.addCard(d.dealCard());
             askAgain = false;
         }
     }
