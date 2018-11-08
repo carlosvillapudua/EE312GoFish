@@ -66,10 +66,16 @@ using namespace std;
 		vector<Card>::const_iterator iter;
 		string s;
 		//cout << "Cards in " << myName << "'s hand:" << endl;
-		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){
-			//cout << *iter << endl;
-			s += (*iter).toString();
+		if(getHandSize() > 0){
+			for(iter = myHand.begin() ; iter != myHand.end() ; iter++){
+				//cout << *iter << endl;
+				s += (*iter).toString();
+			}
 		}
+		else{
+			s = "None";
+		}
+
 		return s;
 	}
 
@@ -78,10 +84,16 @@ using namespace std;
 		vector<Card>::const_iterator iter;
 		string s;
 		//cout << "Books of :" << myName << endl;
-		for(iter = myBook.begin() ; iter != myBook.end() ; iter = iter + 2){
-			//cout << *iter << " " << *(iter + 1) << endl;
-			s += (*iter).toString();
+		if(getBookSize() > 0){
+			for(iter = myBook.begin() ; iter != myBook.end() ; iter = iter + 2){
+				//cout << *iter << " " << *(iter + 1) << endl;
+				s += (*iter).toString();
+			}
 		}
+		else{
+			s = "None";
+		}
+
 		return s;
 	}
 

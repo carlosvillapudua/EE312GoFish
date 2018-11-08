@@ -32,7 +32,7 @@ int main( )
     // p.shuffle();
     // p.dealCard();
 
-
+   int numCards = 5;
 
    Player p1("Joe");
    Player p2("Jane");
