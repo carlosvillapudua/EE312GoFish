@@ -12,7 +12,7 @@ using namespace std;
 // PROTOTYPES for functions used by this demonstration program:
 void dealHand(Deck &d, Player &p, int numCards);
 
-void playerTurnAction(Player &pTurn, Player &pAsked, Deck d);
+void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d);
 
 
 int main( )
@@ -92,7 +92,7 @@ int main( )
 
 
 // booking all possible pairs at once when it is a player's turn
-void playerTurnAction(Player &pTurn, Player &pAsked, Deck d){
+void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d){
     Card c1;
     Card c2;
 
@@ -123,6 +123,7 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck d){
             getCard = d.dealCard();
             pTurn.addCard(getCard);
             cout << pTurn.getName() << " draws " << getCard << endl;
+
             cout << pTurn.showHand() << endl;
             cout << "\n";
             askAgain = false;
