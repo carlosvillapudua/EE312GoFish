@@ -37,10 +37,12 @@ using namespace std;
 	bool Player::rankInHand(Card c) const{
 		vector<Card>::const_iterator iter;
 
-		for(iter = myHand.begin() ; iter != myHand.end() ; iter++){        
-			if(c.getRank() == (*iter).getRank()){
-				return true;
-			}  
+		if(myHand.size() > 0){
+			for(iter = myHand.begin() ; iter != myHand.end() ; iter++){        
+				if(c.getRank() == (*iter).getRank()){
+					return true;
+				}  
+			}
 		}
 
 		return false;		
@@ -151,7 +153,7 @@ using namespace std;
 	}
 
 	int Player::getBookSize() const{
-		return  (myBook.size())/2 ;
+		return  (myBook.size())/2;
 	}
 
 

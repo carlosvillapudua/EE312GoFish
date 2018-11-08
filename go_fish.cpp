@@ -109,9 +109,10 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d){
         }
 
         //asks pAsked for a card
-        Card ask = pTurn.chooseCardFromHand();
+        Card ask = pTurn.chooseCardFromHand(); // get random card to ask from hand
         cout << pTurn.getName() << " asks - Do you have a " << ask.rankString(ask.getRank()) << "?" << endl;
         Card getCard;
+
         if(pAsked.rankInHand(ask)){ // if pAsked has the card with same rank in hand
             cout << pAsked.getName() << " says - Yes, I have a " << ask.rankString(ask.getRank()) << "." << endl;
             getCard = pAsked.removeCardFromHand(ask);
