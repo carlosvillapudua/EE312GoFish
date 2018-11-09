@@ -20,20 +20,6 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d);
 int main( ) {
     ofstream outputFile;
     outputFile.open("gofish_results.txt");
-    // int numCards = 5;
-    // Card t(5, Card::clubs);
-    // cout << t.toString() << endl ;
-    // Card s(5, Card::clubs);
-    // if (s != t){
-    //     cout << "haha" << endl;
-    // }
-    // else if ( t == s ){
-    //     cout << "no haha" << endl;
-    // }
-
-    // Deck p;
-    // p.shuffle();
-    // p.dealCard();
 
    int numCards = 7;
 
@@ -67,14 +53,6 @@ cout << p2.showBooks() << endl;
    }
 
 
-   // cout << p1.showHand() << endl;
-   // cout << p2.showHand() << endl;
-   // cout << "*********************" << endl;
-   // cout << p1.showBooks() << endl;
-   // cout << p2.showBooks() << endl;
-
-   // playerTurnAction(p1, p2, d);
-
 cout << p1.showHand() << endl;
 cout << p2.showHand() << endl;
 cout << "*********************" << endl;
@@ -89,21 +67,6 @@ cout << p2.getName() <<" has books:\n" << p2.showBooks() << endl;
 
    outputFile.close();
 
-
-   /*p1.bookCards(d.dealCard(), d.dealCard());
-   p1.bookCards(d.dealCard(), d.dealCard());
-   p1.bookCards(d.dealCard(), d.dealCard());
-   p1.bookCards(d.dealCard(), d.dealCard());
-   p1.bookCards(d.dealCard(), d.dealCard());
-   p1.bookCards(d.dealCard(), d.dealCard());
-
-   cout << p1.getName() <<" has : " << p1.showHand() << endl;
-   cout << p2.getName() <<" has : " << p2.showHand() << endl;
-
-   cout << p1.getName() <<" has books:\n" << p1.showBooks() << endl;
-   cout << p2.getName() <<" has books:\n" << p2.showBooks() << endl;
-   //cout << "Ac, Ac  5s, 5s  Ac, Ac  5s, 5s  Ac, Ac  5s, 5s \nAc, Ac  5s, 5s  Ac, Ac  5s, 5s  Ac, Ac  5s, 5s\n";
-   */
     return EXIT_SUCCESS;
 }
 
