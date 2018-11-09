@@ -6,6 +6,9 @@
 #include "card.h"
 #include "player.h"
 #include <time.h>
+#include <stdlib.h>
+
+
 
     Deck::Deck(){
         myIndex = 0;                                                           //initialize index of where to deal cards from

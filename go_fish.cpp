@@ -12,9 +12,9 @@ using namespace std;
 
 
 // PROTOTYPES for functions used by this demonstration program:
-void dealHand(Deck &d, Player &p, int numCards);
+void dealHand(Deck &d, Player &p, int numCards, ofstream& file);
 
-void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d);
+void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d, ofstream& file);
 
 
 int main( ) {
@@ -43,8 +43,8 @@ int main( ) {
    Deck d;  //create a deck of cards
    d.shuffle();
 
-   dealHand(d, p1, numCards);
-   dealHand(d, p2, numCards);
+   dealHand(d, p1, numCards, outputFile);
+   dealHand(d, p2, numCards, outputFile);
 
 
 cout << p1.showHand() << endl;
@@ -60,9 +60,9 @@ cout << p2.showBooks() << endl;
     outputFile << p2.showBooks() << endl;
 
    while(p1.getBookSize() < 14 && p2.getBookSize() < 14){
-    playerTurnAction(p1, p2, d);
+    playerTurnAction(p1, p2, d, outputFile);
     if(p1.getBookSize() < 14){
-        playerTurnAction(p2, p1, d);
+        playerTurnAction(p2, p1, d, outputFile);
     }
    }
 
@@ -109,12 +109,12 @@ cout << p2.getName() <<" has books:\n" << p2.showBooks() << endl;
 
 
 // booking all possible pairs at once when it is a player's turn
-void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d){
+void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d, ofstream& outputFile){
     Card c1;
     Card c2;
 
-    fstream outputFile;
-    outputFile.open("gofish_results.txt");
+//    fstream outputFile;
+//    outputFile.open("gofish_results.txt");
 
     bool askAgain = true;
 
@@ -131,7 +131,7 @@ cout << "\n";
         }
 
         if(pTurn.getHandSize() == 0){
-            dealHand(d, pTurn, 1);
+            dealHand(d, pTurn, 1, outputFile);
         }
         //asks pAsked for a card
         Card ask = pTurn.chooseCardFromHand(); // get random card to ask from hand
@@ -150,7 +150,7 @@ cout << pAsked.getName() << " says - Yes, I have a " << ask.rankString(ask.getRa
 cout << pAsked.getName() << " says - Go Fish!" << endl;
             outputFile << pAsked.getName() << " says - Go Fish!" << endl;
 
-            dealHand(d, pTurn, 1);
+            dealHand(d, pTurn, 1, outputFile);
 
             // getCard = d.dealCard();
             // pTurn.addCard(getCard);
@@ -163,15 +163,15 @@ cout << "\n";
             askAgain = false;
         }
     }
-    outputFile.close();
+
 }
 
 
 
-void dealHand(Deck &d, Player &p, int numCards)
+void dealHand(Deck &d, Player &p, int numCards, ofstream& outputFile)
 {
-    fstream outputFile;
-    outputFile.open("gofish_results.txt");
+//    fstream outputFile;
+//    outputFile.open("gofish_results.txt");
 
     Card c;
     for (int i=0; i < numCards; i++){
@@ -180,7 +180,7 @@ void dealHand(Deck &d, Player &p, int numCards)
     }
 cout << p.getName() << " draws " << c << endl;
     outputFile << p.getName() << " draws " << c << endl;
-    outputFile.close();
+
 }
 
 

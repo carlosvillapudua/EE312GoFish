@@ -1,21 +1,297 @@
-Yale Patt draws As
-you have a 3?
+Yale Patt draws 3d
+Ramesh Yerraballi draws 2s
+Jd, Jc, Ac, 6h, 4c, 8h, 3d
+7s, 3s, Ad, 6d, 5c, 2h, 2s
+*********************
+None
+None
+Yale Patt books the J
+
+Yale Patt asks - Do you have a 3?
 Ramesh Yerraballi says - Yes, I have a 3.
-Yale Patt booksAs, As
+Yale Patt books the 3
+
+Yale Patt asks - Do you have a A?
+Ramesh Yerraballi says - Yes, I have a A.
+Yale Patt books the A
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 10s
+6h, 4c, 8h, 10s
+
+Ramesh Yerraballi books the 2
+
+Ramesh Yerraballi asks - Do you have a 6?
+Yale Patt says - Yes, I have a 6.
+Ramesh Yerraballi books the 6
+
+Ramesh Yerraballi asks - Do you have a 5?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws Qs
+7s, 5c, Qs
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws Qh
+4c, 8h, 10s, Qh
+
+Ramesh Yerraballi asks - Do you have a Q?
+Yale Patt says - Yes, I have a Q.
+Ramesh Yerraballi books the Q
+
+Ramesh Yerraballi asks - Do you have a 7?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 9h
+7s, 5c, 9h
+
+Yale Patt asks - Do you have a 8?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 5s
+4c, 8h, 10s, 5s
+
+Ramesh Yerraballi asks - Do you have a 5?
+Yale Patt says - Yes, I have a 5.
+Ramesh Yerraballi books the 5
+
+Ramesh Yerraballi asks - Do you have a 7?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 3h
+7s, 9h, 3h
+
+Yale Patt asks - Do you have a 10?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws Qd
+4c, 8h, 10s, Qd
+
+Ramesh Yerraballi asks - Do you have a 9?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 8c
+7s, 9h, 3h, 8c
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 2d
+4c, 8h, 10s, Qd, 2d
+
+Ramesh Yerraballi asks - Do you have a 8?
+Yale Patt says - Yes, I have a 8.
+Ramesh Yerraballi books the 8
+
+Ramesh Yerraballi asks - Do you have a 3?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws Kh
+7s, 9h, 3h, Kh
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 3c
+4c, 10s, Qd, 2d, 3c
+
+Ramesh Yerraballi asks - Do you have a K?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws Js
+7s, 9h, 3h, Kh, Js
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 9c
+4c, 10s, Qd, 2d, 3c, 9c
+
+Ramesh Yerraballi asks - Do you have a 9?
+Yale Patt says - Yes, I have a 9.
+Ramesh Yerraballi books the 9
+
+Ramesh Yerraballi asks - Do you have a K?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 4h
+7s, 3h, Kh, Js, 4h
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Yes, I have a 4.
+Yale Patt books the 4
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 4d
+10s, Qd, 2d, 3c, 4d
+
+Ramesh Yerraballi asks - Do you have a 3?
+Yale Patt says - Yes, I have a 3.
+Ramesh Yerraballi books the 3
+
+Ramesh Yerraballi asks - Do you have a K?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 10h
+7s, Kh, Js, 10h
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 6s
+10s, Qd, 2d, 4d, 6s
+
+Ramesh Yerraballi asks - Do you have a 7?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 9s
+7s, Kh, Js, 10h, 9s
+
+Yale Patt asks - Do you have a 10?
+Ramesh Yerraballi says - Yes, I have a 10.
+Yale Patt books the 10
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 7d
+Qd, 2d, 4d, 6s, 7d
+
+Ramesh Yerraballi asks - Do you have a 7?
+Yale Patt says - Yes, I have a 7.
+Ramesh Yerraballi books the 7
+
+Ramesh Yerraballi asks - Do you have a J?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws As
+Kh, Js, 9s, As
+
+Yale Patt asks - Do you have a Q?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 10d
+Qd, 2d, 4d, 6s, 10d
+
+Ramesh Yerraballi asks - Do you have a 9?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 7c
+Kh, Js, 9s, As, 7c
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 6c
+Qd, 2d, 4d, 6s, 10d, 6c
+
+Ramesh Yerraballi asks - Do you have a 7?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws Qc
+Kh, Js, 9s, As, 7c, Qc
+
+Yale Patt books the 6
+
+Yale Patt asks - Do you have a Q?
+Ramesh Yerraballi says - Yes, I have a Q.
+Yale Patt books the Q
+
+Yale Patt asks - Do you have a 10?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws Kc
+2d, 4d, 10d, Kc
+
+Ramesh Yerraballi asks - Do you have a 7?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws Ah
+Kh, Js, 9s, As, 7c, Ah
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 10c
+2d, 4d, 10d, Kc, 10c
+
+Ramesh Yerraballi books the A
+
+Ramesh Yerraballi asks - Do you have a 9?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 5h
+Kh, Js, 9s, 7c, 5h
+
+Yale Patt books the 10
+
+Yale Patt asks - Do you have a K?
+Ramesh Yerraballi says - Yes, I have a K.
+Yale Patt books the K
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 9d
+2d, 4d, 9d
+
+Ramesh Yerraballi asks - Do you have a 5?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws Kd
+Js, 9s, 7c, 5h, Kd
+
+Yale Patt asks - Do you have a 9?
+Ramesh Yerraballi says - Yes, I have a 9.
+Yale Patt books the 9
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws Ks
+2d, 4d, Ks
+
+Ramesh Yerraballi asks - Do you have a 7?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 7h
+Js, 7c, 5h, Kd, 7h
+
+Yale Patt asks - Do you have a 2?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws 2c
+2d, 4d, Ks, 2c
+
+Ramesh Yerraballi books the 7
+
+Ramesh Yerraballi asks - Do you have a J?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 8s
+Js, 5h, Kd, 8s
+
+Yale Patt books the 2
+
+Yale Patt asks - Do you have a K?
+Ramesh Yerraballi says - Yes, I have a K.
+Yale Patt books the K
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws Jh
+4d, Jh
+
+Ramesh Yerraballi asks - Do you have a 5?
+Yale Patt says - Go Fish!
+Ramesh Yerraballi draws 4s
+Js, 5h, 8s, 4s
+
+Yale Patt asks - Do you have a 4?
+Ramesh Yerraballi says - Yes, I have a 4.
+Yale Patt books the 4
+
+Yale Patt asks - Do you have a J?
+Ramesh Yerraballi says - Yes, I have a J.
+Yale Patt books the J
+
+Yale Patt draws 8d
+Yale Patt asks - Do you have a 8?
+Ramesh Yerraballi says - Yes, I have a 8.
+Yale Patt books the 8
+
+Yale Patt draws 5d
+Yale Patt asks - Do you have a 5?
+Ramesh Yerraballi says - Yes, I have a 5.
+Yale Patt books the 5
+
+Yale Patt draws As
+Yale Patt asks - Do you have a A?
+Ramesh Yerraballi says - Go Fish!
+Yale Patt draws As
+As, As
+
+As, As
 None
 *********************
 Yale Patt has books:
-Jd|Jh  2d|2c  6h|6s  Ac|Ad  8d|8s
-Js|Jc  5h|5d  Qd|Qc  2h|2s  7h|7s
-3h|3s  Qh|Qs  As|Ah  9h|9s  
+Jd|Jc  3d|3s  Ac|Ad  4c|4h  10s|10h
+6s|6c  Qd|Qc  10d|10c  Kc|Kh  9d|9s
+2d|2c  Ks|Kd  4d|4s  Jh|Js  8d|8s
+5d|5h  
 Ramesh Yerraballi has books:
-3d|3c  10d|10h  6d|6c  Ks|Kh  4d|4s
-7c|7d  10c|10s  5c|5s  9d|9c  4c|4h
-8c|8h  Kd|Kc  
-, I have a 9.
-Yale Patt books the 9
-
-Yale Patt asks - Do you have a A?
-Ramesh Yerraballi says - Go Fish!
-As, As
+2h|2s  6d|6h  Qs|Qh  5c|5s  8c|8h
+9h|9c  3h|3c  7s|7d  As|Ah  7c|7h
 

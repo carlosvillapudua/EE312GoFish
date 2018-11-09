@@ -6,9 +6,9 @@ Date:	11/05/18
 card.cpp has functions to
 
 */
-#include <cstdlib>
+#include <stdlib.h>
 #include <iostream>
-#include <string>
+#include <string.h>
 
 #include "card.h"
 
@@ -58,7 +58,8 @@ using namespace std;
 
     string Card::rankString(int r) const {
         if (r >= 2 && r <= 10){
-           return to_string(r);
+            string rankStr = to_string(r);
+           return rankStr;
         }
         else{
             switch (r){                     //assuming that ace is rank of 1 and king is rank of 13
