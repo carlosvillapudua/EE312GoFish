@@ -16,19 +16,19 @@
 
 using namespace std;
 	
-	//tested
+
 	Player::Player(){
 		myName = "";
 		unsigned int currentTime = (unsigned) time(0);
         srand(currentTime);		
 	}
 
-	//tested
+
 	void Player::addCard(Card c){
 		myHand.push_back(c);
 	}
 
-	//need to remove cards from hand
+
 	void Player::bookCards(Card c1, Card c2){
 		myBook.push_back(c1);
 		myBook.push_back(c2);
@@ -48,7 +48,7 @@ using namespace std;
 		return false;		
 	}
 
-	// what happens if theres no cards in hand?
+
 	Card Player::chooseCardFromHand() const{
 		int randCard = rand() % myHand.size();
 
@@ -66,7 +66,7 @@ using namespace std;
 
 		return false;
 	}
-	//confused about why returning the same card removed
+
 	Card Player::removeCardFromHand(Card c){
 		vector<Card>::iterator iter;
 		iter = myHand.begin();
@@ -80,7 +80,7 @@ using namespace std;
 		return retcard;
 	}
 
-	//tested
+
 	string Player::showHand() const{
 		vector<Card>::const_iterator iter;
 		string s;
@@ -106,7 +106,7 @@ using namespace std;
 		return s;
 	}
 
-	//tested
+	
 	string Player::showBooks() const{
 		vector<Card>::const_iterator iter;
 		string s;
@@ -161,7 +161,6 @@ using namespace std;
 		vector<Card>::const_iterator iter;
 		vector<Card>::const_iterator iterInner;
 
-//if(myHand.size() > 1) {
 		if(getHandSize() > 1) {
 			for(iter = myHand.begin() ; iter != myHand.end() - 1 ; iter++){ // loop through first to second to last card
 				for(iterInner = iter + 1 ; iterInner != myHand.end() ; iterInner++){ // loop through second to last card

@@ -8,8 +8,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-
-
     Deck::Deck(){
         myIndex = 0;                                                           //initialize index of where to deal cards from
 
@@ -29,11 +27,6 @@
             myCards[i] = Card(i-(3*SIZE/4)+1, Card::clubs);
         }
 
-/*for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is made correctly
-cout << myCards[i].toString() << endl;
-}
-cout<< "hello hello hello" << endl;
-*/
     }
 
     void Deck::shuffle() {
@@ -53,12 +46,6 @@ cout<< "hello hello hello" << endl;
                 myCards[randNum2] = temp;                   //place contents of previous randNum1 into randNum2 space
             }
         }
-
-/*for (int i = 0; i < SIZE; i++){                                    //print out results to console to confirm deck is shuffled correctly
-cout << myCards[i].toString() << endl;
-}*/
-//test
-
     }
 
     Card Deck::dealCard() {               
@@ -67,8 +54,6 @@ cout << myCards[i].toString() << endl;
             myIndex++;
             return retCard;
         }
-
-        // not sure what to do when all cards are dealt
         Card c;
         return c;
     }

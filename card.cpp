@@ -14,8 +14,6 @@ card.cpp has functions to
 
 using namespace std;
 
-
-
     Card::Card(){
         myRank = 1;
         mySuit = spades;                //set default card to ace of spades
@@ -75,7 +73,6 @@ using namespace std;
         }
         return "ERROR";
     }
-    //test
 
     bool Card::operator == (const Card& rhs) const{
         if (mySuit == rhs.mySuit && myRank == rhs.myRank){
