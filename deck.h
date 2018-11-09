@@ -32,11 +32,43 @@ class Deck
     static const int SIZE = 52;
 
 public:
+    /* FUNCTION - Deck
+        *creates a deck with 52 cards in order
+
+        input parms - none
+
+        output parms - none
+     */
     Deck();             // pristine, sorted deck
 
+
+    /* FUNCTION - shuffle
+        *randomly shuffles cards in deck
+
+        input parms - none
+
+        output parms - none
+     */
     void shuffle();     // shuffle the deck, all 52 cards present
+
+
+    /* FUNCTION - dealCard
+        *deals a single card from deck to a player and loses ability to deal that card again
+
+        input parms - none
+
+        output parms - Card from deck
+     */
     Card dealCard();    // get a card, after 52 are dealt, fail
 
+
+    /* FUNCTION - size
+        *tells number of cards left in deck
+
+        input parms - none
+
+        output parms - size of cards in deck (int)
+     */
     int  size() const;  // # cards left in the deck
 
 private:

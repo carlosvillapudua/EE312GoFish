@@ -3,11 +3,11 @@
 Code By: Rithvik Baddam (rrb2442) and Carlos Villapudua (civ298)
 Date:   11/05/18
 
-This is a driver go fish program 
+This is a driver go fish program
 
-Creates two players and makes them play the GO Fish! game
-Uses card, deck and player classes to run the game
-
+- Creates two players and makes them play the GO Fish! game
+- Uses card, deck and player classes to run the game
+- Outputs the game to text file "gofish_results.txt"
 
 */
 #include <iostream>    // Provides cout and cin
@@ -52,7 +52,7 @@ int main( ) {
     outputFile << "*********************\n" << endl;
     outputFile << "GAME BEGINS!\n" << endl;
 
-    // main engine of game, players take turns 
+    // main engine of game, players take turns
     while(p1.getBookSize() < 14 && p2.getBookSize() < 14){ // game ends when one of the players has more than 14 books
         playerTurnAction(p1, p2, d, outputFile);
         if(p1.getBookSize() < 14){
@@ -104,7 +104,7 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d, ofstream& outputFi
             outputFile << pAsked.getName() << " says - Yes, I have a " << ask.rankString(ask.getRank()) << "." << endl;
             getCard = pAsked.removeCardFromHand(ask);
             pTurn.addCard(getCard);
-            askAgain = true; 
+            askAgain = true;
         }
         else{ // When the opponent does not have the requested card
 
@@ -128,7 +128,7 @@ void playerBookCards(Player &pTurn, ofstream& outputFile){
         pTurn.bookCards(c1, c2);
         outputFile << pTurn.getName() << " books the " << c1.rankString(c1.getRank()) << "\n" << endl;
 
-        // remove cards from hand that were booked 
+        // remove cards from hand that were booked
         pTurn.removeCardFromHand(c1);
         pTurn.removeCardFromHand(c2);
     }

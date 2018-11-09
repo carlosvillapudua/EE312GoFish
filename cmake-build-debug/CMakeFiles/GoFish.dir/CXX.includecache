@@ -6,10 +6,32 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.cpp
+stdlib.h
+-
+iostream
+-
+string.h
+-
+card.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
+
 C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
 iostream
 -
 string
+-
+
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/deck.cpp
+deck.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/deck.h
+card.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
+player.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/player.h
+time.h
+-
+stdlib.h
 -
 
 C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/deck.h
@@ -31,6 +53,20 @@ player.h
 C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/player.h
 deck.h
 C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/deck.h
+
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/player.cpp
+player.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/player.h
+card.h
+C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/card.h
+cstdlib
+-
+iostream
+-
+string
+-
+time.h
+-
 
 C:/Users/Carlos Villapudua/CLionProjects/Life/EE312GoFish/player.h
 iostream
