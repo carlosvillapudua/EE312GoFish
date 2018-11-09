@@ -6,6 +6,7 @@ Date:	11/05/18
 This is a driver file for player.h 
 
 */
+
 #include "player.h"
 #include "card.h"
 #include <cstdlib>
@@ -82,7 +83,6 @@ using namespace std;
 		myHand.erase(iter);
 		return retcard;
 	}
-
 
 	string Player::showHand() const{
 		vector<Card>::const_iterator iter;

@@ -10,7 +10,6 @@ Uses card, deck and player classes to run the game
 
 
 */
-
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include <fstream>
