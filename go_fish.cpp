@@ -33,6 +33,7 @@ int main( ) {
     dealHand(d, p1, numCards, outputFile);
     dealHand(d, p2, numCards, outputFile);
 
+    // Player hands and books before game begins
     outputFile << p1.getName() << "'s hand: " << p1.showHand() << endl;
     outputFile << p2.getName() << "'s hand: " << p2.showHand() << endl;
     outputFile << "*********************" << endl;
@@ -41,18 +42,32 @@ int main( ) {
     outputFile << "*********************\n" << endl;
     outputFile << "GAME BEGINS!\n" << endl;
 
-    while(p1.getBookSize() < 14 && p2.getBookSize() < 14){
+    // main engine of game, players take turns 
+    while(p1.getBookSize() < 14 && p2.getBookSize() < 14){ // game ends when one of the players has more than 14 books
         playerTurnAction(p1, p2, d, outputFile);
         if(p1.getBookSize() < 14){
             playerTurnAction(p2, p1, d, outputFile);
         }
     }
 
-    outputFile << p1.getName() << "'s hand: " << p1.showHand() << endl;
-    outputFile << p2.getName() << "'s hand: " << p2.showHand() << endl;
     outputFile << "*********************" << endl;
-    outputFile << p1.getName() <<" has books:\n" << p1.showBooks() << endl;
-    outputFile << p2.getName() <<" has books:\n" << p2.showBooks() << endl;
+    outputFile << "GAME OVER\n" << endl;
+
+    // player books after game ends
+    outputFile << p1.getName() <<" has books:\n" << p1.showBooks() << "\n" << endl;
+    outputFile << p2.getName() <<" has books:\n" << p2.showBooks() << "\n" << endl;
+
+    outputFile << "*********************" << endl;
+    outputFile << "The winner is: ";
+    if(p1.getBookSize() > p2.getBookSize()){
+        outputFile << p1.getName() << "! Congratulations!!" << endl;
+    }
+    else{
+        outputFile << p2.getName() << "! Congratulations!!" << endl;
+    }
+
+    outputFile << "*********************" << endl;
+
 
     outputFile.close();
 
@@ -63,12 +78,13 @@ int main( ) {
 void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d, ofstream& outputFile){
     bool askAgain = true;
 
-    while(askAgain){
+    while(askAgain){ // keep looping after succesful asks
         playerBookCards(pTurn, outputFile);
 
-        if(pTurn.getHandSize() == 0){
+        if(pTurn.getHandSize() == 0){ // deal a card if player has no cards after booking
             dealHand(d, pTurn, 1, outputFile);
         }
+
         //asks pAsked for a card
         Card ask = pTurn.chooseCardFromHand(); // get random card to ask from hand
         outputFile << pTurn.getName() << " asks - Do you have a " << ask.rankString(ask.getRank()) << "?" << endl;
@@ -78,7 +94,7 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d, ofstream& outputFi
             outputFile << pAsked.getName() << " says - Yes, I have a " << ask.rankString(ask.getRank()) << "." << endl;
             getCard = pAsked.removeCardFromHand(ask);
             pTurn.addCard(getCard);
-            askAgain = true;
+            askAgain = true; 
         }
         else{ // When the opponent does not have the requested card
 
@@ -87,9 +103,6 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d, ofstream& outputFi
             // grab a card from the deck and book any pairs before ending turn
             dealHand(d, pTurn, 1, outputFile);
             playerBookCards(pTurn, outputFile);
-
-            outputFile << pTurn.showHand() << endl;
-            outputFile << "\n";
 
             askAgain = false;
         }
@@ -100,10 +113,12 @@ void playerTurnAction(Player &pTurn, Player &pAsked, Deck &d, ofstream& outputFi
 void playerBookCards(Player &pTurn, ofstream& outputFile){
     Card c1;
     Card c2;
-    while(pTurn.checkHandForPair(c1, c2)){
+
+    while(pTurn.checkHandForPair(c1, c2)){ // loop until player has no more pairs left to book
         pTurn.bookCards(c1, c2);
-        outputFile << pTurn.getName() << " books the " << c1.rankString(c1.getRank()) << endl;
-        outputFile << "\n";
+        outputFile << pTurn.getName() << " books the " << c1.rankString(c1.getRank()) << "\n" << endl;
+
+        // remove cards from hand that were booked 
         pTurn.removeCardFromHand(c1);
         pTurn.removeCardFromHand(c2);
     }
@@ -112,12 +127,15 @@ void playerBookCards(Player &pTurn, ofstream& outputFile){
 void dealHand(Deck &d, Player &p, int numCards, ofstream& outputFile)
 {
     Card c;
+    // player receives cards from deck
     for (int i=0; i < numCards; i++){
         c = d.dealCard();
         p.addCard(c);
     }
-    outputFile << p.getName() << " draws " << c << endl;
-
+    // only output what the player draws when drawing from the deck while playing
+    if(numCards == 1){
+        outputFile << p.getName() << " draws " << c << "\n"<< endl;
+    }
 }
 
 
