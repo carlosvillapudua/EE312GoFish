@@ -3,7 +3,7 @@
 Code By: Rithvik Baddam (rrb2442) and Carlos Villapudua (civ298)
 Date:	11/05/18
 
-card.cpp has functions to
+This is a driver file for card.h 
 
 */
 #include <stdlib.h>

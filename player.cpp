@@ -1,10 +1,13 @@
-//
-// Created by Carlos Villapudua on 11/5/2018.
-//
+/*
 
+Code By: Rithvik Baddam (rrb2442) and Carlos Villapudua (civ298)
+Date:	11/05/18
+
+This is a driver file for player.h 
+
+*/
 #include "player.h"
 #include "card.h"
-//test
 #include <cstdlib>
 #include <iostream>
 #include <string>

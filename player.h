@@ -4,6 +4,14 @@
 // This class represents a player in a card game that takes "tricks"
 // The "Books" represent a container for holding tricks
 
+/*
+
+Rithvik Baddam (rrb2442) and Carlos Villapudua (civ298)
+Date:   11/05/18
+
+
+
+*/
 #ifndef _PLAYER_H
 #define _PLAYER_H
 

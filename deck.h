@@ -12,7 +12,13 @@
 // returns each card in the deck after shuffling.
 //
 // Calling shuffle again replenishes the deck with 52 cards.
+/*
 
+Rithvik Baddam (rrb2442) and Carlos Villapudua (civ298)
+Date:	11/05/18
+
+
+*/
 #ifndef _DECK_H
 #define _DECK_H
 

@@ -1,3 +1,15 @@
+/*
+
+Code By: Rithvik Baddam (rrb2442) and Carlos Villapudua (civ298)
+Date:   11/05/18
+
+This is a driver go fish program 
+
+Creates two players and makes them play the GO Fish! game
+Uses card, deck and player classes to run the game
+
+
+*/
 
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
